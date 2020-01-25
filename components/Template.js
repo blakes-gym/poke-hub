@@ -9,7 +9,7 @@ import '../scss/template.scss'
 const navLinks = [
   { href: '/', text: 'Home' },
   { href: '/wish-list', text: 'Wish List' },
-  { href: '/team-analysis', text: 'Team Analysis' }
+  { href: '/teams', text: 'Teams' }
 ]
 
 export default function Template({ children }) {
@@ -45,7 +45,7 @@ export default function Template({ children }) {
               {
                 ['/']: 'Poke Hub',
                 ['/wish-list']: 'Wish List',
-                ['/team-analysis']: 'Team Analysis'
+                ['/teams']: 'Teams'
               }[path]
             }
           </Navbar.Brand>
