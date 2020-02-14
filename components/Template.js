@@ -34,7 +34,7 @@ export default function Template({ children }) {
               {
                 ['/']: 'Poke Hub',
                 ['/wish-list']: 'Wish List',
-                ['/team-analysis']: 'Team Analysis'
+                ['/teams']: 'Teams'
               }[path]
             }
           </Navbar.Brand>
