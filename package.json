@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "git": "git add . && git commit -m \"commit\" && git push origin master"
   },
   "repository": {
     "type": "git",
