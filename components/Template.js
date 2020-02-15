@@ -1,11 +1,22 @@
+import { useState } from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import 'bootstrap/scss/bootstrap.scss'
 import '../scss/template.scss'
 
+const navLinks = [
+  { href: '/', text: 'Home' },
+  { href: '/wish-list', text: 'Wish List' },
+  { href: '/teams', text: 'Teams' }
+]
+
 export default function Template({ children }) {
+  const [open, setOpen] = useState(false)
+  const router = useRouter()
   const path = router.pathname
+  const toggle = () => setOpen(!open)
   return (
     <div className="bg-secondary">
       <div
@@ -17,7 +28,7 @@ export default function Template({ children }) {
             <img
               src="https://i.imgur.com/JHjpCEa.png"
               style={{ width: '7rem', height: '7rem' }}
-            ></img>
+            />
             Poké Hub
           </h2>
         </div>
