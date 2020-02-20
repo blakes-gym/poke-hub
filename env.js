@@ -1,3 +1,4 @@
 module.exports = {
-  server: 'http://localhost:4000'
+  SERVER: 'http://localhost:4000/api',
+  TEST: 'TESTING TESTING'
 }

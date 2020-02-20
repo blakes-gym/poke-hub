@@ -32,37 +32,41 @@ export default function Template({ children }) {
             Poké Hub
           </h2>
         </div>
-        <Navbar
-          bg="light"
-          expand="lg"
-          sticky="top"
-          expanded={open}
-          onSelect={() => console.log('yaaaay')}
-          className="border-top border-bottom"
-        >
-          <Navbar.Brand>
-            {
+        <div className="sticky-top">
+          <Navbar
+            bg="light"
+            expand="lg"
+            expanded={open}
+            onSelect={() => console.log('yaaaay')}
+            className="border-top border-bottom shadow"
+          >
+            <Navbar.Brand>
               {
-                ['/']: 'Poke Hub',
-                ['/wish-list']: 'Wish List',
-                ['/teams']: 'Teams'
-              }[path]
-            }
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggle} />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-              {navLinks.map((navLink, i) => (
-                <NavLink
-                  {...navLink}
-                  path={path}
-                  key={`navlink-${i}`}
-                  setOpen={setOpen}
-                />
-              ))}
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
+                {
+                  ['/']: 'Poke Hub',
+                  ['/wish-list']: 'Wish List',
+                  ['/teams']: 'Teams'
+                }[path]
+              }
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggle} />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ml-auto">
+                {navLinks.map((navLink, i) => (
+                  <NavLink
+                    {...navLink}
+                    path={path}
+                    key={`navlink-${i}`}
+                    setOpen={setOpen}
+                  />
+                ))}
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+          {/* <div className="p-2 bg-white border-bottom">
+            <input className="form-control" />
+          </div> */}
+        </div>
         {children}
       </div>
     </div>

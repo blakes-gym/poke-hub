@@ -1,8 +1,6 @@
-const withSass = require('@zeit/next-sass')
 const env = require('./env')
+const withSass = require('@zeit/next-sass')
 
 module.exports = withSass({
-  env: {
-    test: process.env.TEST
-  }
+  env: { ...env }
 })
