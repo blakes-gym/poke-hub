@@ -38,7 +38,7 @@ export default function Template({ children }) {
             expand="lg"
             expanded={open}
             onSelect={() => console.log('yaaaay')}
-            className="border-top border-bottom shadow"
+            className="border-top border-bottom"
           >
             <Navbar.Brand>
               {
@@ -63,9 +63,7 @@ export default function Template({ children }) {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-          {/* <div className="p-2 bg-white border-bottom">
-            <input className="form-control" />
-          </div> */}
+          <div className="pl-2 bg-white border-bottom">Filter</div>
         </div>
         {children}
       </div>
