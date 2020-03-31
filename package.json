@@ -31,7 +31,7 @@
     "bootstrap": "^4.4.1",
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
-    "next": "^9.2.0",
+    "next": "^9.3.2",
     "next-with-apollo": "^5.0.0",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
